@@ -1,6 +1,5 @@
 package com.dsimdev.usuarioservice.feignclients;
 
-import com.dsimdev.usuarioservice.models.Carro;
 import com.dsimdev.usuarioservice.models.Moto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-@FeignClient(name = "moto-service", url = "http://localhost:8003")
+@FeignClient(name = "moto-service")
 public interface MotoFeignClient {
 
     @PostMapping("/motos")
